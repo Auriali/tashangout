@@ -3,7 +3,6 @@
     width:1000px;
     margin: auto;
 	text-align: center;
-	background-image:url("../images/background.jpg");
 	background-attachment:fixed;
 	background-size:cover;
 }
