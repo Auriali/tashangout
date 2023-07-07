@@ -1,18 +1,16 @@
+@font-face {
+	font-family: "Nexa Heavy";
+	src: url('../fonts/nexa.eot') format('embedded-opentype');
+	src: url('../fonts/nexa.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
 body {
-    background: center;
-    width:1000px;
+	height: 100%;
+	width:auto;
     margin: auto;
-	text-align: center;
-	background-attachment:fixed;
-	background-size:cover;
-}
-
-#home {
-	background-image:url("../images/background.jpg");
-}
-
-#moosicvc {
-	background-image:url("../images/moosic.jpg");
+	font-family: Nexa Heavy;
 }
 
 html {
@@ -24,50 +22,163 @@ a {
 }
 
 a:hover {
-	opacity:60%;
+	opacity:50%;
 }
 
-.main {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.header {
+	background-image:url("../images/background.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 30%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
 }
 
 
-.main #logo {
+.header #logo {
     height:auto;
-	width:100%;
-	max-width:600px;
-	min-width:320px;
-	padding-top:15px;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+	margin: 0;
 }
 
-.main #moosiclogo {
+.one {
+	height:100%;
+	color:#33aaff;
+	background-color:#1a1a1a;
+	text-align:center;
+	position:relative;
+	min-height: 30%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.one h1 {
+	height:auto;
+	width:50%;
+	max-width:50%;
+	min-width: 300px;
+	margin: 0;
+	font-size: clamp(4rem, 7.5vw, 8rem);
+	line-height:100%;
+}
+
+.two {
+	background-image:url("../images/moosic.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:relative;
+	min-height: 30%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+
+.two #moosiclogo {
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
     height:auto;
-	width:100%;
-	max-width:800px;
-	min-width:400px;
-	padding-top:15px;
+	width:50%;
+	margin: 0;
 }
 
-.footer {
+.three {
+	background-image:url("../images/smp.png");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:relative;
+	min-height: 30%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+
+.three #smplogo {
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+    height:auto;
+	width:50%;
+	margin: 0;
+}
+
+.four {
+	background-image:url("../images/bot.jpg");
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position:relative;
+	min-height: 30%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+
+.four #botlogo {
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+    height:auto;
+	width:50%;
+	margin: 0;
+}
+
+.links {
 	position: fixed;
-	left: 0;
-	bottom: 0;
+	left: 0pt;
+	bottom: 0pt;
 	width: 100%;
+	height: 50px;
 	text-align: center;
+	background-image: none;
+	background-repeat: repeat;
+	background-attachment: scroll;
+	background-position: 0% 0%;
 }
 
-.footer #join {
-	height:30.6px;
-	width:auto;
-	padding-bottom:25px;
+.contents {
+	height: 50px;
+	width: 100%;
+	margin: auto;
 }
 
-.footer #moosic {
-	height:30.6px;
+.contents #join {
+	height:30px;
 	width:auto;
-	padding-bottom:25px;
-	padding-left:5px;
+	align-items: center;
+	justify-content: center;
+}
+
+.contents #leaderboard {
+	height:30px;
+	width:auto;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-height: 320px) {
+	.links {
+		display: none;
+	}
 }
