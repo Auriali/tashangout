@@ -89,8 +89,6 @@ a:hover {
 	width:40%;
 	max-width:40%;
 	min-width: 300px;
-    height:auto;
-	width:50%;
 	margin: 0;
 }
 
@@ -114,8 +112,6 @@ a:hover {
 	width:40%;
 	max-width:40%;
 	min-width: 300px;
-    height:auto;
-	width:50%;
 	margin: 0;
 }
 
@@ -139,8 +135,6 @@ a:hover {
 	width:40%;
 	max-width:40%;
 	min-width: 300px;
-    height:auto;
-	width:50%;
 	margin: 0;
 }
 
@@ -160,25 +154,31 @@ a:hover {
 .contents {
 	height: 50px;
 	width: 100%;
-	margin: auto;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
 }
 
 .contents #join {
 	height:30px;
-	width:auto;
-	align-items: center;
-	justify-content: center;
+	display: flex;
+	margin: 5px;
 }
 
 .contents #leaderboard {
 	height:30px;
-	width:auto;
-	align-items: center;
-	justify-content: center;
+	display: flex;
 }
 
 @media (max-height: 320px) {
 	.links {
 		display: none;
+	}
+}
+
+@media (hover: hover) {
+	.contents:hover {
+		background-color: rgba(26, 26, 26, 0.8);
 	}
 }
