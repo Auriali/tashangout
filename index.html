@@ -1,44 +1,81 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width" />
     <title>ta's hangout</title>
     <link type="text/css" rel="stylesheet" href="./css/styles.css" />
     <link rel="icon" href="./images/favicon.png" />
-</head>
+  </head>
 
-<body>
-	<div class="header">
-			<img alt="ta's hangout Logo" src="./images/icon.svg" id="logo" />
-	</div>
-	
-	<div class="one">
-		<h1>a chill place to hangout.</h1>
-	</div>
+  <body>
+    <div class="header">
+      <img alt="ta's hangout Logo" src="./images/icon.svg" id="logo" />
+    </div>
 
-	<div class="two">
-			<img alt="moosic vc Logo" src="./images/moosiclogo.png" id="moosiclogo" /><br>
-	</div>
+    <div class="one">
+      <h1>a chill place to <span class="underline-anim">hangout</span>.</h1>
+    </div>
 
-	<div class="three">
-		<img alt="ta's hangout smp Logo" src="./images/smplogo.svg" id="smplogo" /><br>
-	</div>
+    <div class="two">
+      <img
+        alt="moosic vc Logo"
+        src="./images/moosiclogo.png"
+        id="moosiclogo"
+      /><br />
+    </div>
 
-	<div class="four">
-		<img alt="AurialiBot Logo" src="./images/botlogo.svg" id="botlogo" /><br>
-	</div>
+    <div class="three">
+      <img
+        alt="ta's hangout smp Logo"
+        src="./images/smplogo.svg"
+        id="smplogo"
+      /><br />
+    </div>
 
-	<div class="links">
-		<div class="contents">
-			<a href="https://discord.gg/Fqv4uBgJPp" title="join">
-					<img alt="join button" title="join" src="./images/join.svg" id="join" />
-				</a>
-			<a href="https://lurkr.gg/levels/tashangout" title="leaderboard">
-					<img alt="leaderboard button" title="leaderboard" src="./images/leaderboard.svg" id="join" />
-				</a>
-		</div>
-	</div>
-</body>
+    <div class="four">
+      <img
+        alt="AurialiBot Logo"
+        src="./images/botlogo.svg"
+        id="botlogo"
+      /><br />
+    </div>
+
+    <div class="links">
+      <div class="contents">
+        <a href="https://discord.gg/Fqv4uBgJPp" title="join">
+          <img
+            alt="join button"
+            title="join"
+            src="./images/join.svg"
+            id="join"
+          />
+        </a>
+        <a href="https://lurkr.gg/levels/tashangout" title="leaderboard">
+          <img
+            alt="leaderboard button"
+            title="leaderboard"
+            src="./images/leaderboard.svg"
+            id="join"
+          />
+        </a>
+      </div>
+    </div>
+    <script>
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.body.style.setProperty(
+            "--scroll",
+            ((document.documentElement.scrollTop + document.body.scrollTop) /
+              (document.documentElement.scrollHeight -
+                document.documentElement.clientHeight)) *
+              100
+          );
+        },
+        false
+      );
+    </script>
+  </body>
 </html>
