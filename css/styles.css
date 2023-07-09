@@ -252,6 +252,7 @@ a:hover {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -270,13 +271,6 @@ a:hover {
   .links {
     display: none;
   }
-}
-	height: 50px;
-	width: 100%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
 }
 
 .contents #join {
