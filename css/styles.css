@@ -85,7 +85,7 @@ a:hover {
   background-color: white;
   left: 0;
   bottom: 0.1em;
-  z-index: 1;
+  z-index: -1;
   max-width: 0;
   animation: underline 1s linear infinite;
   animation-play-state: paused;
@@ -263,12 +263,14 @@ a:hover {
   display: flex;
   margin: 5px;
   z-index: 4;
+  position: relative;
 }
 
 .contents #leaderboard {
   height: 30px;
   display: flex;
   z-index: 4;
+  position: relative;
 }
 
 @media (max-height: 320px) {
