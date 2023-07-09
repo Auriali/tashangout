@@ -1,90 +1,158 @@
 @font-face {
-	font-family: "Nexa Heavy";
-	src: url('../fonts/nexa.eot') format('embedded-opentype');
-	src: url('../fonts/nexa.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
+  font-family: "Nexa Heavy";
+  src: url("../fonts/nexa.eot") format("embedded-opentype");
+  src: url("../fonts/nexa.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
 
 body {
-	height: 100%;
-	width:auto;
-    margin: auto;
-	font-family: Nexa Heavy;
+  height: 100%;
+  width: auto;
+  margin: auto;
+  font-family: Nexa Heavy;
 }
 
 html {
-	height: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
 a {
-	text-decoration:none;
+  text-decoration: none;
 }
 
 a:hover {
-	opacity:50%;
+  opacity: 50%;
 }
 
 .header {
-	background-image:url("../images/background.jpg");
-	height: 100%; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	min-height: 30%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
+  background-image: url("../images/background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-
 .header #logo {
-    height:auto;
-	width:40%;
-	max-width:40%;
-	min-width: 300px;
-	margin: 0;
+  height: auto;
+  width: 40%;
+  max-width: 40%;
+  min-width: 300px;
+  margin: 0;
 }
 
 .one {
-	height:100%;
-	color:#33aaff;
-	background-color:#1a1a1a;
-	text-align:center;
-	position:relative;
-	min-height: 30%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+  height: 100%;
+  color: #33aaff;
+  background-color: #1a1a1a;
+  text-align: center;
+  position: relative;
+  min-height: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .one h1 {
-	height:auto;
-	width:50%;
-	max-width:50%;
-	min-width: 300px;
-	margin: 0;
-	font-size: clamp(4rem, 7.5vw, 8rem);
-	line-height:100%;
+  height: auto;
+  width: 50%;
+  max-width: 50%;
+  min-width: 300px;
+  margin: 0;
+  font-size: clamp(4rem, 7.5vw, 8rem);
+  line-height: 100%;
+  position: relative;
+}
+
+.underline-anim {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.underline-anim::after {
+  content: "";
+  position: absolute;
+  height: 0.2em;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  bottom: 0.1em;
+  z-index: -1;
+  max-width: 0;
+  animation: underline 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(calc(var(--scroll) - 15) / 30 * -2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes underline {
+  to {
+    max-width: 100%;
+  }
 }
 
 .two {
-	background-image:url("../images/moosic.jpg");
-	height: 100%; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position:relative;
-	min-height: 30%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+  background-image: url("../images/moosic.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
+@media (orientation: portrait) {
+  .two {
+    background-size: auto 100%;
+    animation: zoomInPortrait 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(calc(var(--scroll) - 35) / 50 * -2s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  @keyframes zoomInPortrait {
+    to {
+      background-size: auto 215%;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  .two {
+    background-size: 100% auto;
+    animation: zoomInLandscape 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(calc(var(--scroll) - 28) / 120 * -2s);
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  @keyframes zoomInLandscape {
+    to {
+      background-size: 215% auto;
+    }
+  }
+}
 
 .two #moosiclogo {
+  height: auto;
+  width: 40%;
+  max-width: 40%;
+  min-width: 300px;
+  height: auto;
+  width: 50%;
+  margin: 0;
 	height:auto;
 	width:40%;
 	max-width:40%;
@@ -93,21 +161,28 @@ a:hover {
 }
 
 .three {
-	background-image:url("../images/smp.png");
-	height: 100%; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position:relative;
-	min-height: 30%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+  background-image: url("../images/smp.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-
 .three #smplogo {
+  height: auto;
+  width: 40%;
+  max-width: 40%;
+  min-width: 300px;
+  height: auto;
+  width: 50%;
+  margin: 0;
 	height:auto;
 	width:40%;
 	max-width:40%;
@@ -116,21 +191,42 @@ a:hover {
 }
 
 .four {
-	background-image:url("../images/bot.jpg");
-	height: 100%; 
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position:relative;
-	min-height: 30%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+  background-image: url("../images/bot.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 30%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
-
 .four #botlogo {
+  height: auto;
+  width: 40%;
+  max-width: 40%;
+  min-width: 300px;
+  height: auto;
+  width: 50%;
+  margin: 0;
+  transform: translateY(50px);
+  opacity: 0;
+  animation: botLogoIn 1s linear infinite;
+  animation-play-state: paused;
+  animation-delay: calc(calc(var(--scroll) - 88) / 10 * -2s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes botLogoIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 	height:auto;
 	width:40%;
 	max-width:40%;
@@ -139,36 +235,49 @@ a:hover {
 }
 
 .links {
-	position: fixed;
-	left: 0pt;
-	bottom: 0pt;
-	width: 100%;
-	height: 50px;
-	text-align: center;
-	background-image: none;
-	background-repeat: repeat;
-	background-attachment: scroll;
-	background-position: 0% 0%;
+  position: fixed;
+  left: 0pt;
+  bottom: 0pt;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-image: none;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-position: 0% 0%;
+  z-index: 3;
 }
 
 .contents {
-	height: 50px;
-	width: 100%;
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 3;
+  position: relative;
 }
 
 .contents #join {
-	height:30px;
-	display: flex;
-	margin: 5px;
+  height: 30px;
+  display: flex;
+  margin: 5px;
+  z-index: 4;
+  position: relative;
 }
 
 .contents #leaderboard {
-	height:30px;
-	display: flex;
+  height: 30px;
+  display: flex;
+  z-index: 4;
+  position: relative;
+}
+
+@media (max-height: 320px) {
+  .links {
+    display: none;
+  }
 }
 
 @media (max-height: 320px) {
