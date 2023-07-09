@@ -273,17 +273,6 @@ a:hover {
   }
 }
 
-.contents #join {
-	height:30px;
-	display: flex;
-	margin: 5px;
-}
-
-.contents #leaderboard {
-	height:30px;
-	display: flex;
-}
-
 @media (max-height: 320px) {
 	.links {
 		display: none;
