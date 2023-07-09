@@ -255,6 +255,7 @@ a:hover {
   justify-content: center;
   overflow: hidden;
   z-index: 3;
+  position: relative;
 }
 
 .contents #join {
