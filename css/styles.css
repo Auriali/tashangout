@@ -245,6 +245,7 @@ a:hover {
   background-repeat: repeat;
   background-attachment: scroll;
   background-position: 0% 0%;
+  z-index: 3;
 }
 
 .contents {
@@ -254,7 +255,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: -3;
+  z-index: 3;
   position: relative;
 }
 
@@ -262,14 +263,14 @@ a:hover {
   height: 30px;
   display: flex;
   margin: 5px;
-  z-index: -4;
+  z-index: 4;
   position: relative;
 }
 
 .contents #leaderboard {
   height: 30px;
   display: flex;
-  z-index: -4;
+  z-index: 4;
   position: relative;
 }
 
