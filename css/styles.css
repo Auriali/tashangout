@@ -153,6 +153,11 @@ a:hover {
   height: auto;
   width: 50%;
   margin: 0;
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+	margin: 0;
 }
 
 .three {
@@ -178,6 +183,11 @@ a:hover {
   height: auto;
   width: 50%;
   margin: 0;
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+	margin: 0;
 }
 
 .four {
@@ -217,6 +227,11 @@ a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+	height:auto;
+	width:40%;
+	max-width:40%;
+	min-width: 300px;
+	margin: 0;
 }
 
 .links {
@@ -235,25 +250,54 @@ a:hover {
 .contents {
   height: 50px;
   width: 100%;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .contents #join {
   height: 30px;
-  width: auto;
-  align-items: center;
-  justify-content: center;
+  display: flex;
+  margin: 5px;
 }
 
 .contents #leaderboard {
   height: 30px;
-  width: auto;
-  align-items: center;
-  justify-content: center;
+  display: flex;
 }
 
 @media (max-height: 320px) {
   .links {
     display: none;
   }
+}
+	height: 50px;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+}
+
+.contents #join {
+	height:30px;
+	display: flex;
+	margin: 5px;
+}
+
+.contents #leaderboard {
+	height:30px;
+	display: flex;
+}
+
+@media (max-height: 320px) {
+	.links {
+		display: none;
+	}
+}
+
+@media (hover: hover) {
+	.contents:hover {
+		background-color: rgba(26, 26, 26, 0.8);
+	}
 }
