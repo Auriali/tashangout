@@ -254,17 +254,20 @@ a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .contents #join {
   height: 30px;
   display: flex;
   margin: 5px;
+  z-index: 2;
 }
 
 .contents #leaderboard {
   height: 30px;
   display: flex;
+  z-index: 2;
 }
 
 @media (max-height: 320px) {
