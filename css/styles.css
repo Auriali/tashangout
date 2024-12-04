@@ -255,7 +255,7 @@ a:hover {
   position: relative;
 }
 
-.contents #join {
+.contents #buttons {
   height: 30px;
   display: flex;
   margin: 5px;
