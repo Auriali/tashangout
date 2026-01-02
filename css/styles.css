@@ -51,7 +51,7 @@ a:hover {
 .one {
   height: 100%;
   color: #33aaff;
-  background-color: #1a1a1a;
+  background-color: #000C1F;
   text-align: center;
   position: relative;
   min-height: 30%;
@@ -83,7 +83,7 @@ a:hover {
   position: absolute;
   height: 0.2em;
   width: 100%;
-  background-color: white;
+  background-color: #EFFBFF;
   left: 0;
   bottom: 0.1em;
   z-index: -1;
@@ -284,6 +284,6 @@ a:hover {
 
 @media (hover: hover) {
 	.contents:hover {
-		background-color: rgba(26, 26, 26, 0.8);
+		background-color: rgba(28, 55, 96, 0.8);
 	}
 }
